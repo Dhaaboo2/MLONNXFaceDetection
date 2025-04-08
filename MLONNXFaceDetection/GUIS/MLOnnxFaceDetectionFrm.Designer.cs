@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            btnCom = new Button();
             btndet = new Button();
             btnbrow = new Button();
             PB = new PictureBox();
+            PB1 = new PictureBox();
+            PB2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PB1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PB2).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -47,15 +52,28 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(btnCom);
             splitContainer1.Panel1.Controls.Add(btndet);
             splitContainer1.Panel1.Controls.Add(btnbrow);
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(PB2);
+            splitContainer1.Panel2.Controls.Add(PB1);
             splitContainer1.Panel2.Controls.Add(PB);
             splitContainer1.Size = new Size(664, 337);
             splitContainer1.SplitterDistance = 221;
             splitContainer1.TabIndex = 0;
+            // 
+            // btnCom
+            // 
+            btnCom.Location = new Point(12, 100);
+            btnCom.Name = "btnCom";
+            btnCom.Size = new Size(119, 38);
+            btnCom.TabIndex = 2;
+            btnCom.Text = "Compare Face";
+            btnCom.UseVisualStyleBackColor = true;
+            btnCom.Click += btnCom_Click;
             // 
             // btndet
             // 
@@ -82,10 +100,30 @@
             PB.BackColor = Color.Cyan;
             PB.Location = new Point(55, 12);
             PB.Name = "PB";
-            PB.Size = new Size(318, 280);
+            PB.Size = new Size(318, 150);
             PB.SizeMode = PictureBoxSizeMode.StretchImage;
             PB.TabIndex = 0;
             PB.TabStop = false;
+            // 
+            // PB1
+            // 
+            PB1.BackColor = Color.Cyan;
+            PB1.Location = new Point(23, 175);
+            PB1.Name = "PB1";
+            PB1.Size = new Size(181, 150);
+            PB1.SizeMode = PictureBoxSizeMode.StretchImage;
+            PB1.TabIndex = 1;
+            PB1.TabStop = false;
+            // 
+            // PB2
+            // 
+            PB2.BackColor = Color.Cyan;
+            PB2.Location = new Point(232, 175);
+            PB2.Name = "PB2";
+            PB2.Size = new Size(195, 150);
+            PB2.SizeMode = PictureBoxSizeMode.StretchImage;
+            PB2.TabIndex = 2;
+            PB2.TabStop = false;
             // 
             // MLOnnxFaceDetectionFrm
             // 
@@ -102,6 +140,8 @@
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PB1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PB2).EndInit();
             ResumeLayout(false);
         }
 
@@ -111,5 +151,8 @@
         private Button btndet;
         private Button btnbrow;
         private PictureBox PB;
+        private Button btnCom;
+        private PictureBox PB2;
+        private PictureBox PB1;
     }
 }
